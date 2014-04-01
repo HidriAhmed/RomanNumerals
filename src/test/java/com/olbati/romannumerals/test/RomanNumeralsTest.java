@@ -32,4 +32,15 @@ public class RomanNumeralsTest {
 
 	}
 
+	/**
+	 * tests the conversion from Roman numerals to normal digits
+	 */
+	public void testConvertsFromRomanSymbolsToNormalDigits() {
+		String romanNumber = "MCMXC";
+		int expectedIntegerNumber = 1999;
+		int resultNormalDigits = converter
+				.fromRomanNumeralsToNormalDigit(romanNumber);
+
+		assertThat(expectedIntegerNumber).isEqualTo(resultNormalDigits);
+	}
 }
