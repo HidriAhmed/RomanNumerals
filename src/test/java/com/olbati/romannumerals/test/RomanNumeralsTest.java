@@ -35,12 +35,13 @@ public class RomanNumeralsTest {
 	/**
 	 * tests the conversion from Roman numerals to normal digits
 	 */
+	@Test
 	public void testConvertsFromRomanSymbolsToNormalDigits() {
-		String romanNumber = "MCMXC";
+		String romanNumber = "MCMXCIX";
 		int expectedIntegerNumber = 1999;
 		int resultNormalDigits = converter
 				.fromRomanNumeralsToNormalDigit(romanNumber);
-
+		System.out.println(romanNumber + " = " + resultNormalDigits);
 		assertThat(expectedIntegerNumber).isEqualTo(resultNormalDigits);
 	}
 }
