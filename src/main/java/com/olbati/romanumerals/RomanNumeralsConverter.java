@@ -2,7 +2,13 @@ package com.olbati.romanumerals;
 
 public class RomanNumeralsConverter {
 
-	public String FromNormalDigitToRomanNumerals(Integer intValue) {
+	/**
+	 * this method converts normal digits to Roman Numerals
+	 * 
+	 * @param intValue
+	 * @return
+	 */
+	public String fromNormalDigitToRomanNumerals(Integer intValue) {
 		StringBuilder result = new StringBuilder();
 		int nbThousands = intValue / 1000;
 		int nbHundreds = (intValue % 1000) / 100;
@@ -59,6 +65,8 @@ public class RomanNumeralsConverter {
 			result.append("X");
 		}
 
+		// counting number of digits and generating the corresponding Roman
+		// Symbol
 		if (digit == 9) {
 			result.append("IX");
 		} else if (digit == 8) {
